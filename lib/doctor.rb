@@ -39,8 +39,14 @@ class Doctor
     end
   end
   def patients
-    appointments.map do |appointment|
+    Appointment.map do |appointment|
       appointment.patients
     end
+  end
+end
+
+def artists
+  Song.all.map do |song|
+    song.artist
   end
 end
